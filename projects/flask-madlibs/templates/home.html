@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+</head>
+
+<body>
+    <h1>Madlibs</h1>
+    <h2>Fill out the prompts!</h2>
+    <form action="/story">
+
+
+        {% for prompt in prompts %}
+        <div>
+            <label for="{{prompt}}">{{prompt}}:
+                <input type="text" name="{{prompt}}" required>
+            </label>
+        </div>
+        {% endfor %}
+
+        <button type="submit">Submit</button>
+    </form>
+
+</body>
+
+</html>
