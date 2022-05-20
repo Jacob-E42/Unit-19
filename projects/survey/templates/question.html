@@ -1,0 +1,28 @@
+
+{% extends "base.html" %}
+
+
+{%block title%}{{satisfaction.title}}{%endblock%}
+
+{%block instructions%} {{satisfaction.instructions}} {% endblock %}
+
+{%block nextpage%}/answer{%endblock%} {%block method%}POST{% endblock%}
+
+{%block form%}
+
+
+{% with question = satisfaction.questions[current_question].question %}
+{%if question%}
+<p>{{question}}</p>
+
+{% for choice in satisfaction.questions[current_question].choices %}
+<label for="question">{{choice}}
+    <input id="question" type="radio" name="question" value="{{choice}}" >
+</label><br>
+{%endfor%}
+
+{%endif%}
+
+{%endwith%}
+
+{% endblock %}

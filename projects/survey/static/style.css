@@ -1,0 +1,21 @@
+body {
+    text-align: center;
+}
+
+h1{
+    text-align: center;
+}
+h3{
+    text-align: center;
+}
+form{
+    text-align: center;
+}
+
+.invalid{
+    background-color: rgba(255, 0, 0, .2 );
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 1rem;
+    width: 100%;
+}

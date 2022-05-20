@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thank You</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    {% for msg in get_flashed_messages() %}
+        <p class="invalid">{{msg}}</p>
+    {%endfor%}
+
+    <h1>Thank you for filling out our survey!</h1>
+</body>
+</html>

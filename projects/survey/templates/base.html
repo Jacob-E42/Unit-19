@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/style.css">
+    <title></title>
+</head>
+
+<body>
+    {%for msg in get_flashed_messages()%}
+        <p class="invalid">{{msg}}</p>
+    {%endfor%}
+    <h1>{%block title%} {%endblock%}</h1>
+    <h3>{%block instructions%}{%endblock%}</h3>
+    
+    <form action="{%block nextpage%}{%endblock%}" method="{%block method%}{% endblock%}">
+        {%block form%} 
+        
+        {%endblock%}
+        <button>Next</button>
+        
+    </form>
+    
+    
+</body>
+</html>
