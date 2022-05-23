@@ -1,10 +1,8 @@
 
 {% extends "base.html" %}
 
-{%block title%}{{satisfaction.title}}{%endblock%}
-
-{%block instructions%} {{satisfaction.instructions}} {% endblock %}
 
 
-{%block nextpage%}question/{{current_question}}{%endblock%}
-{%block method%}GET{% endblock%}
+
+{%block nextpage%}/initialize_survey{%endblock%}
+{%block method%}POST{% endblock%}

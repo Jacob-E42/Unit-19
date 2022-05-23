@@ -1,3 +1,8 @@
+<!-- I didn't fix this because I wanted to move on, but in retrospect, I would take the form
+element out of the template and put it into the individual templates. 
+
+ -->
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -12,10 +17,10 @@
     {%for msg in get_flashed_messages()%}
         <p class="invalid">{{msg}}</p>
     {%endfor%}
-    <h1>{%block title%} {%endblock%}</h1>
-    <h3>{%block instructions%}{%endblock%}</h3>
+    <h1>{{satisfaction.title}}</h1>
+    <h3>{{satisfaction.instructions}}</h3>
     
-    <form action="{%block nextpage%}{%endblock%}" method="{%block method%}{% endblock%}">
+    <form action="{%block nextpage%}{%endblock%}" method="{%block method%}{% endblock%}" >
         {%block form%} 
         
         {%endblock%}
