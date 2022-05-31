@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="/static/style.css" rel="stylesheet">
+    <title>Boggle</title>
+</head>
+<body>
+    <h1>Boggle</h1>
+    <section id="message"></section>
+    
+    <table id="board">
+        <thead>Enter a word!</thead>
+        <tbody>
+            {% for y in board %}
+        <tr>
+            {% for x in y %}
+            
+            <td>{{ x }}</td>
+            {%endfor%}
+        </tr>
+            
+        {%endfor%}
+        </tbody>
+        
+    </table>
+
+    <form id="form" action="/real_word">
+        <input type="text" id="input" placeholder="Enter a word" name="word"  required>
+        <button  id="submit">Submit</button>
+    </form>
+
+    <div id="stats">
+        <p>Number of times played: {{session['times_played']}}</p>
+        <p>Highest Score: {{session["highest_score"]}}</p>
+    </div>
+
+
+    <form action="/play"><button>Start New Game</button> </form>
+    <script src="http://unpkg.com/jquery"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.27.2/axios.min.js" 
+        integrity="sha512-odNmoc1XJy5x1TMVMdC7EMs3IVdItLPlCeL5vSUPN2llYKMJ2eByTTAIiiuqLg+GdNr9hF6z81p27DArRFKT7A==" 
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="/static/Game.js"></script>
+    <script src="/static/app.js"></script>
+</body>
+</html>
